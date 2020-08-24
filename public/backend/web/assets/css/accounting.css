@@ -1,0 +1,70 @@
+.page-sidebar .sidebar-menu a{
+    min-height: 38px;
+    height:auto;
+    line-height: 19px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+}
+.table-scrollable.over-auto{
+    overflow-x: auto !important;
+}
+.details-tabs{
+    margin-bottom: 20px;
+}
+.space-20{
+    margin-bottom: 20px;
+}
+.input-icon>input.input-sm+[class*="fa-"]{
+    background: linear-gradient(to bottom, #eee 0, #fbfbfb 100%);
+    border: 1px solid #cdcdcd;
+    font-size: 13px;
+    cursor: pointer;
+}
+
+#forVaoXuong input[type=checkbox],
+#forVaoXuong input[type=radio] {
+    display: none;
+}
+input[type=checkbox].checkbox, input[type=radio].checkbox{
+    opacity: 1;
+    left:0px;
+    position: relative;
+    opacity:1;
+    left: 0px;
+    position: relative;
+}
+#QuanTriVien-roles input[type=checkbox].checkbox,#QuanTriVien-roles  input[type=radio].checkbox{
+    top:4px;
+}
+.position-error label.error{
+    position: absolute;
+}
+.width-col-two label{
+    width: 100%;
+    float: left;
+}
+.width-col-two span{
+    width: 50%;
+    float: left;
+}
+.form-group{
+    display: inline-block;
+    width: 100%;
+}
+.form-inline .form-group{
+    width: auto;
+}
+.form-horizontal .form-group{
+    display: block;
+    width: auto;
+}
+.form-horizontal.space-20{
+    margin-top: 20px;
+}
+.error-select2{
+    margin-bottom: 10px;
+}
+.error-select2 label.error{
+    position: absolute;
+    top: 30px;
+}

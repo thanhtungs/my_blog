@@ -1,0 +1,176 @@
+.login-page, .register-page{
+  font: 13px/20px 'Lucida Grande', Tahoma, Verdana, sans-serif;
+  color: #404040;
+  background: #0ca3d2;
+}
+.container {
+  margin: 80px auto;
+  width: 640px;
+}
+
+.form-login-gara .login {
+  position: relative;
+  margin: 0 auto;
+  padding: 20px 20px 20px;
+  width: 600px;
+  background: white;
+  border-radius: 3px;
+  -webkit-box-shadow: 0 0 200px rgba(255, 255, 255, 0.5), 0 1px 2px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 200px rgba(255, 255, 255, 0.5), 0 1px 2px rgba(0, 0, 0, 0.3);
+  display: inline-block;
+}
+.form-login-gara .login:before {
+  content: '';
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  bottom: -8px;
+  left: -8px;
+  z-index: -1;
+  background: rgba(0, 0, 0, 0.08);
+  border-radius: 4px;
+}
+.form-login-gara .login h1 {
+  margin: -20px -20px 21px;
+  line-height: 40px;
+  font-size: 15px;
+  font-weight: bold;
+  color: #555;
+  text-align: center;
+  text-shadow: 0 1px white;
+  background: #f3f3f3;
+  border-bottom: 1px solid #b4ccce;
+  border-radius: 3px 3px 0 0;
+  background-image: linear-gradient(to bottom, #edf5f8, #cde5ef);
+  box-shadow: 0 1px whitesmoke;
+}
+.form-login-gara .login p {
+  margin: 20px 0 0;
+}
+.form-login-gara .login p:first-child {
+  margin-top: 0;
+}
+.form-login-gara .login input[type=text],.form-login-gara .login input[type=password] {
+  width: 275px;
+  padding-left: 45px;
+  position: relative;
+}
+.form-login-gara .login .user,.form-login-gara .login .pass{position: relative;}
+.form-login-gara .login .user:after,.form-login-gara .login .pass:after{
+  position: absolute;content: '';left: 6px;bottom: 5px;background: #0ca3d2 url(../img/icon-user.png) no-repeat scroll center;height: 36px;width: 40px;background-size: 25px auto;border-radius: 4px 0px 0px 4px;
+}
+.form-login-gara .login .pass:after{background-image: url(../img/icon-pass.png);background-size: 20px auto;}
+.form-login-gara .login p.remember_me {
+  float: left;
+  line-height: 31px;
+  margin-top: 10px;
+}
+.form-login-gara .login p.remember_me label {
+  font-size: 12px;
+  color: #777;
+  cursor: pointer;
+}
+.form-login-gara .login p.remember_me input {
+  position: relative;
+  bottom: 1px;
+  margin-right: 4px;
+  vertical-align: middle;
+}
+.form-login-gara .login p.submit {
+  text-align: right;
+}
+
+.form-login-gara .login-help {
+  margin: 20px 0;
+  font-size: 11px;
+  color: white;
+  text-align: center;
+  text-shadow: 0 1px #2a85a1;
+}
+.form-login-gara .login-help a {
+  color: #cce7fa;
+  text-decoration: none;
+}
+.form-login-gara .login-help a:hover {
+  text-decoration: underline;
+}
+
+.form-login-gara :-moz-placeholder {
+  color: #777 !important;
+  font-size: 13px;
+}
+
+.form-login-gara ::-webkit-input-placeholder {
+  color: #777;
+  font-size: 14px;
+}
+
+.form-login-gara input {
+  font-family: 'Lucida Grande', Tahoma, Verdana, sans-serif;
+  font-size: 13px;
+}
+
+.form-login-gara input[type=text],.form-login-gara input[type=password] {
+  margin: 5px;
+  padding: 0 10px;
+  width: 278px;
+  height: 36px;
+  color: #404040;
+  background: white;
+  border: 1px solid;
+  border-color: #c4c4c4 #d1d1d1 #d4d4d4;
+  border-radius: 2px;
+  outline: 5px solid #eff4f7;
+  -moz-outline-radius: 3px;
+  -webkit-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.12);
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.12);
+}
+.form-login-gara input[type=text]:focus,.form-login-gara input[type=password]:focus {
+  border-color: #7dc9e2;
+  outline-color: #dceefc;
+  outline-offset: 0;
+}
+
+.form-login-gara input[type=submit] {
+  padding: 0 18px;
+  height: 29px;
+  font-size: 12px;
+  font-weight: bold;
+  color: #527881;
+  text-shadow: 0 1px #e3f1f1;
+  background: #cde5ef;
+  border: 1px solid;
+  border-color: #b4ccce #b3c0c8 #9eb9c2;
+  border-radius: 16px;
+  outline: 0;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  background-image: -webkit-linear-gradient(top, #edf5f8, #cde5ef);
+  background-image: -moz-linear-gradient(top, #edf5f8, #cde5ef);
+  background-image: -o-linear-gradient(top, #edf5f8, #cde5ef);
+  background-image: linear-gradient(to bottom, #edf5f8, #cde5ef);
+  -webkit-box-shadow: inset 0 1px white, 0 1px 2px rgba(0, 0, 0, 0.15);
+  box-shadow: inset 0 1px white, 0 1px 2px rgba(0, 0, 0, 0.15);
+}
+.form-login-gara input[type=submit]:hover{
+  background-image: -webkit-linear-gradient(top, #cde5ef, #edf5f8);
+  background-image: -moz-linear-gradient(top, #cde5ef, #edf5f8);
+  background-image: -o-linear-gradient(top, #cde5ef, #edf5f8);
+  background-image: linear-gradient(to bottom, #cde5ef, #edf5f8 );
+}
+.form-login-gara input[type=submit]:active {
+  background: #cde5ef;
+  border-color: #9eb9c2 #b3c0c8 #b4ccce;
+  -webkit-box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.2);
+  box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.2);
+}
+
+.form-login-gara .lt-ie9 input[type=text],.form-login-gara .lt-ie9 input[type=password] {
+  line-height: 34px;
+}
+.form-login-gara form,.form-login-gara .login-images{width: 50%;display: inline-block;}
+.form-login-gara form{margin: 30px auto;}
+.form-login-gara .login-images{width: calc(50% - 30px);float: right;text-align: center;}
+.form-login-gara .login-images .border{display: inline-block;padding: 15px;position: relative;border: 2px dotted rgba(0,0,0,0.3);border-radius: 5px;}
+.form-login-gara .login-images .border:before{position: absolute;content: '';left: -8px;top: -8px;right: -8px;bottom: -8px;background: rgba(255, 255, 255, 0.5);z-index: -1;}
