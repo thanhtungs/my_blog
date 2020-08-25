@@ -9,6 +9,7 @@
 namespace TungTT\Users\Http\Services;
 
 
+use Illuminate\Support\Facades\Hash;
 use TungTT\FileSystems\Components\FileSystem;
 use TungTT\Users\Models\User;
 
@@ -54,6 +55,10 @@ class UserService
         if (!empty($input['image'])) {
             $input['avatar'] = $this->fileSystem->uploadUserImage($input['image']);
         }
+
+        $input['password'] = Hash::make($input['password']);
+
+        $input['active'] = User::ACTIVE;
 
         return $input;
 

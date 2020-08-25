@@ -161,8 +161,14 @@
                         </li>
                         <li style="min-width: 170px;">
                             <a class="login-area dropdown-toggle" data-toggle="dropdown">
+                                {{ \Auth::user()->name }}
                                 <div class="avatar" title="View your public profile">
-                                    <img src="{{ url('/backend/web/assets/img/anonymous.png')}}">
+                                    @if(isset(\Auth::user()->avatar))
+                                        <img src="{{url(\Auth::user()->avatar)}}">
+                                    @else
+                                        <img src="{{ url('/backend/web/assets/img/anonymous.png')}}">
+                                    @endif
+
                                 </div>
                                 <section>
                                     <h2>

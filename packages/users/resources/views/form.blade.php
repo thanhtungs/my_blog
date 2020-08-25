@@ -5,7 +5,7 @@
 @endsection
 
 @section('content')
-    <form action="" method="POST" class="validate-form open-m6 open-m-6-1 active-m-6-1-4" id ="form" autocomplete="false">
+    <form action="" method="POST" class="validate-form open-m6 open-m-6-1 active-m-6-1-4" id ="form" autocomplete="false" enctype="multipart/form-data">
         <div class="message-place">
             @if (session('error'))
                 <div class="alert alert-danger alert-dismissible error-summary">

@@ -10,7 +10,7 @@ class FileSystem
     const UPLOAD_PATH = '/public';
     const TMP_IMAGE = '/images/temp/';
     const TMP_VIDEO = '/videos/temp/';
-    const USER_IMAGE = '/packages/users/';
+    const USER_IMAGE = '/packages/users/images/';
     const DOCUMENT_FILE = '/documents';
     const COMMENT_IMAGE = '/images/comment-images/';
 
@@ -57,7 +57,7 @@ class FileSystem
             return null;
         }
         $relativePath = $this->uploadPath($saveTo);
-        dd($relativePath);
+
         $prefix = date('Y-m-d_');
         $fileName = $this->createFileName($relativePath, $files->getClientOriginalExtension(), $prefix);
         $files->move($relativePath, $fileName);
