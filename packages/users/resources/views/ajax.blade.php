@@ -4,31 +4,27 @@
         <table class="table table-striped table-bordered table-hover" id="thegrid">
             <thead >
             <tr style="background: #eee;">
-                <th><input class="select-on-check-all checkbox" id="checkall" type="checkbox"></th>
-                <th>STT</th>
-                <th width="70">Mã DV</th>
-                <th data-sort-by="ten_dich_vu" data-sort="desc" isoft-sort width="240">Tên dịch vụ</th>
-                <th width="100">Giá thành</th>
-                <th>VAT</th>
-                <th width="100">Thời gian</th>
-                <th width="80">Bảo hành</th>
-                <th>Người sửa</th>
-                <th>Ngày sửa</th>
+                <th width="50"><input class="select-on-check-all checkbox" id="checkall" type="checkbox"></th>
+                <th width="50">STT</th>
+                <th>Họ tên</th>
+                <th width="200">Email</th>
+                <th width="150">Số điện thoại</th>
+                <th width="100">Trạng thái</th>
+                <th width="100">Ngày tạo</th>
                 <th width="120" style="text-align: center">Hành động</th>
             </tr>
             </thead>
             <tbody>
+            @if(count($users) > 0)
+                @foreach($users as $user)
                     <tr data-key="2">
                         <td><input class="checkbox delete-item" name="delete[]" value="" type="checkbox"></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
+                        <td>{{ $rank ++ }}</td>
+                        <td>{{ $user->name }}</td>
+                        <td>{{ $user->email }}</td>
+                        <td>{{ $user->phone }}</td>
+                        <td>{{ $user->name_active }}</td>
+                        <td>{{ date('d/m/Y', strtotime($user->created_at)) }}</td>
                         <td class="text-center">
                             <div class="btn-group hanh-dong" style="margin-bottom: 5px;text-align: center;width: 58px;">
                                 <a class="btn btn-labeled btn-palegreen btn-sm" style="padding-left: 5px;margin: auto;"><i class="fa fa-cogs"></i></a>
@@ -40,13 +36,16 @@
                             </div>
                         </td>
                     </tr>
-                {{--<tr>--}}
-                    {{--<td colspan="10">Không có bản ghi nào được hiển thị</td>--}}
-                {{--</tr>--}}
+                @endforeach
+            @else
+                <tr>
+                    <td colspan="10">Không có bản ghi nào được hiển thị</td>
+                </tr>
+            @endif
             </tbody>
         </table>
     </form>
     <div style="text-align: center;margin-top: 20px;">
-        {{--{{ $data->search_retuls->appends(['s' =>$data->search_group])->links() }}--}}
+        {{ $users->links() }}
     </div>
 </div>

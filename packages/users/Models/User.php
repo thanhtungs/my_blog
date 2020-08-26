@@ -45,4 +45,9 @@ class User extends Authenticatable
 
     const ACTIVE = 1;
     const UNACTIVE = 0;
+
+    public function getNameActiveAttribute()
+    {
+        return $this->active == self::ACTIVE ? "Hoạt động": "Không hoạt động";
+    }
 }

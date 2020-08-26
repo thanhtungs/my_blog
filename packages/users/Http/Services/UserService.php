@@ -36,6 +36,13 @@ class UserService
         $this->fileSystem = $fileSystem;
     }
 
+    public function index($query)
+    {
+        $users = $this->user->paginate(10);
+
+        return $users;
+    }
+
     public function create(array $input)
     {
         if (!empty($data)) return false;

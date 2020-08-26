@@ -160,7 +160,7 @@
                             </a>
                         </li>
                         <li style="min-width: 170px;">
-                            <a class="login-area dropdown-toggle" data-toggle="dropdown">
+                            <a class="login-area dropdown-toggle" data-toggle="dropdown" style="color: white; text-align: center; line-height: 25px;">
                                 {{ \Auth::user()->name }}
                                 <div class="avatar" title="View your public profile">
                                     @if(isset(\Auth::user()->avatar))

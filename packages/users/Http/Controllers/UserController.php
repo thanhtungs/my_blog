@@ -31,9 +31,14 @@ class UserController extends Controller
         $this->userService = $userService;
     }
 
-    public function index()
+    public function index(Request $request)
     {
-        return view('users::index');
+        $search = $request->all();
+
+        $users = $this->userService->index($search);
+        $rank = $users->firstItem();
+
+        return view('users::index', compact('users', 'rank'));
     }
 
     public function create()

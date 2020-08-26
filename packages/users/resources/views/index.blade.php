@@ -12,7 +12,7 @@
                     <form class="form-inline pull-left search_form validate-form" action="" method="get" role="form">
                         <div class="form-group">
                         <span class="input-icon icon-right">
-                            <input type="text" value=""  id="from_date" class="form-control" name="s[kw]" placeholder="Tên dịch vụ">
+                            <input type="text" value=""  id="from_date" class="form-control" name="s[kw]" placeholder="Tên người dùng">
                         </span>
                         </div>
 
