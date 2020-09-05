@@ -36,11 +36,15 @@ class UserService
         $this->fileSystem = $fileSystem;
     }
 
-    public function index($query)
+    public function index($search)
     {
-        $users = $this->user->paginate(10);
+        $users = $this->user->when(!empty($search), function ($query) use ($search) {
+            $query->where('name', 'like', '%'. $search . '%')
+                ->orWhere('phone', 'like', '%' . $search . '%' )
+                ->orWhere('email', 'like', '%' . $search . '%' );
+        });
 
-        return $users;
+        return $users->paginate(10);
     }
 
     public function create(array $input)

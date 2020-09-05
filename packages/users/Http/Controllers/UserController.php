@@ -33,7 +33,7 @@ class UserController extends Controller
 
     public function index(Request $request)
     {
-        $search = $request->all();
+        $search = $request->search;
 
         $users = $this->userService->index($search);
         $rank = $users->firstItem();

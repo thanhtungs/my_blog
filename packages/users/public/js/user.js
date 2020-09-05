@@ -128,6 +128,47 @@ $(document).ready(function () {
             image: "Ảnh không đúng định dạng"
         }
         ,
-    })
-    ;
+    });
+
+    $("#checkall").click(function () {
+        if ($(this).prop('checked') == true) {
+            $(".delete-item").prop("checked", true);
+        } else {
+            $(".delete-item").removeAttr('checked');
+        }
+    });
+
+    $(".delete-item").click(function () {
+        if ($(this).prop('checked') == true) {
+            let check_box_item = $(".delete-item").length;
+            let checked_box_item = $(".delete-item:checked").size();
+            check_box_item == checked_box_item ?  $("#checkall").prop("checked", true):'';
+        } else {
+            $("#checkall").removeAttr('checked');
+        }
+    });
+
+    $("#btnDelete").click(function () {
+        let check_length = $(".delete-item:checked").length;
+        if(check_length > 0) {
+
+            bootbox.confirm("Bạn đang chọn hành động xóa, rất có thể sẽ ảnh hưởng tới hệ thống. Bạn chắc chắn muốn xóa chứ?", function (result) {
+                if(result) {
+                    //submit
+                    $("#frm_delete").submit();
+                }
+            });
+
+        } else {
+            bootbox.alert("Bạn chưa chọn bản ghi nào để xoá!");
+        }
+    });
 });
+
+let xoa = function(link){
+    bootbox.confirm("Bạn đang chọn hành động xóa, rất có thể sẽ ảnh hưởng tới hệ thống. Bạn chắc chắn muốn xóa chứ?", function (result) {
+        if(result) {
+            window.location = link;
+        }
+    });
+};
