@@ -168,7 +168,12 @@ $(document).ready(function () {
 let xoa = function(link){
     bootbox.confirm("Bạn đang chọn hành động xóa, rất có thể sẽ ảnh hưởng tới hệ thống. Bạn chắc chắn muốn xóa chứ?", function (result) {
         if(result) {
-            window.location = link;
+            $.ajax({
+                url: link,
+                method: 'post'
+            }).done(function () {
+                location.reload();
+            })
         }
     });
 };

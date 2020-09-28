@@ -247,11 +247,12 @@ $('.btn-delete-all').on('click', function () {
             deleted.push($(this).attr('data-id'));
         }
     });
+
     if (deleted.length > 0) {
         bootbox.confirm('Bạn có chắc chắn muốn xóa?', function (result) {
             if (result) {
                 $.ajax({
-                    url: window.location.pathname + '/xoa',
+                    url: window.location.pathname + '/delete',
                     method: "POST",
                     data: {
                         ids: deleted
@@ -266,7 +267,6 @@ $('.btn-delete-all').on('click', function () {
         })
     } else {
         bootbox.alert('Bạn chưa chọn nội dung cần xoá');
-//            alert();
     }
     return false;
 

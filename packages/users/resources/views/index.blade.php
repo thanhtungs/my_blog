@@ -1,5 +1,9 @@
 @extends('layouts::master')
 
+@section('header')
+    <link href="{{ asset('/packages/users/css/user.css') }}" rel="stylesheet">
+@endsection
+
 @section('page_title')
     {{ ucfirst('Danh sách người dùng') }}
 @endsection

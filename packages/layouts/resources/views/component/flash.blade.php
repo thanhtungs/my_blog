@@ -9,24 +9,6 @@
         </ul>
     </div>
 @endif
-@if(isset($store['msg_success']))
-    <div class="alert alert-success alert-dismissible error-summary" style="">
-        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
-        <h4><i class="icon fa fa-bell-o"></i> {{$store['msg_success']['title']}}</h4>
-        <ul>
-            <li>{{$store['msg_success']['message']}}</li>
-        </ul>
-    </div>
-@endif
-@if(isset($store['msg_info']))
-    <div class="alert alert-info alert-dismissible error-summary" style="">
-        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
-        <h4><i class="icon fa fa-bell-o"></i> {{$store['msg_info']['title']}}</h4>
-        <ul>
-            <li>{{$store['msg_info']['message']}}</li>
-        </ul>
-    </div>
-@endif
 
 @if(\Illuminate\Support\Facades\Session::has('success'))
     <div class="alert alert-success" role="alert"><strong>{!! \Illuminate\Support\Facades\Session::get('success') !!}</strong></div>

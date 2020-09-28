@@ -54,6 +54,8 @@ class UserController extends Controller
 
         $this->userService->create($input);
 
+        $request->session()->flash('success', 'Tạo người dùng thành công');
+
         return redirect()->route('users.index');
     }
 
@@ -62,5 +64,16 @@ class UserController extends Controller
         $input = $request->all();
 
         return $this->userService->checkUnique($input);
+    }
+
+    public function destroy(Request $request)
+    {
+        $id = !empty($request->id) ? $request->id: $request->ids;
+
+        $this->userService->delete($id);
+
+        $request->session()->flash('success', 'Xóa người dùng thành công');
+
+        return redirect()->route('users.index');
     }
 }

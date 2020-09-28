@@ -75,6 +75,11 @@ class UserService
 
     }
 
+    private function find($id)
+    {
+        return $this->user->where('id', $id)->first();
+    }
+
     public function checkUnique($data)
     {
         if (empty($data)) return 'false';
@@ -92,5 +97,15 @@ class UserService
         }
 
         return 'true';
+    }
+
+    public function delete($id)
+    {
+        if (is_array($id)) {
+            return $this->user->whereIn('id', $id)->delete();
+        } else {
+            $user = $this->find($id);
+            return $user->delete();
+        }
     }
 }
